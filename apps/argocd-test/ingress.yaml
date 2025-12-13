@@ -3,6 +3,14 @@ kind: Ingress
 metadata:
   name: argocd-test
   namespace: argocd-test
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-buffering: "off"
+    nginx.ingress.kubernetes.io/proxy-cache: "off"
+    nginx.ingress.kubernetes.io/proxy-no-cache: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0";
+      add_header Pragma "no-cache";
+      add_header Expires "0";
 spec:
   ingressClassName: nginx
   rules:
