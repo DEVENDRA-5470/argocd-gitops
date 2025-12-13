@@ -4,7 +4,7 @@ metadata:
   name: argocd-test
   namespace: argocd-test
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: argocd-test
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: deviliam/argocd-test:latest
+        image: deviliam/argocd-test:INIT
         ports:
         - containerPort: 80
