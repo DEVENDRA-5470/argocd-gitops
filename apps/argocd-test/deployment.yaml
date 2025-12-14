@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: deviliam/argocd-test:d5c882e1bf7d17540c45f9d250df17c8857afdf2
+        image: deviliam/argocd-test:5c32012fcb8456f9a97ce7f12eec521e71f1377a
         ports:
         - containerPort: 80
