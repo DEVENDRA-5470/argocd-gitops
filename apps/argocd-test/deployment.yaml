@@ -15,11 +15,7 @@ spec:
     spec:
       containers:
       - name: app
-<<<<<<< HEAD
         image: deviliam/argocd-test:INIT
         imagePullPolicy: IfNotPresent
-=======
-        image: deviliam/argocd-test:5c32012fcb8456f9a97ce7f12eec521e71f1377a
->>>>>>> 9ae83cfe35a554f0c98931c5682019733d1131d0
         ports:
         - containerPort: 80
